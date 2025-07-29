@@ -1,0 +1,34 @@
+<h2> Products Billing</h2>
+<div id="output">
+	
+</div>
+<script>
+	let ProductName="Smart Phone";
+	let ProductPrice =15000; //unit price
+	let Quantity = 2;
+	let vat = 10; //in parcent
+
+	function calculateTotal(price,qnty)
+	{
+		let total = price*qnty;
+		function addVAT(vatrate) //nested function
+		{
+			let vatAmount=(total*vatrate)/100;
+			return total + vatAmount;
+		}
+		return addVAT(vat);
+	}
+	let GrandTotal = calculateTotal(ProductPrice,Quantity);
+	document.getElementById("output").innerHTML = `
+													<p><b> Product: </b>${ProductName}</p>
+													<p><b> Price: </b>${ProductPrice}</p>
+													<p><b> Quantity: </b>${Quantity}</p>
+													<p><b> VAT: </b>${vat}</p><hr>
+
+													<p><b> Total Amount: </b>${GrandTotal}</p>
+
+
+													`
+
+
+</script>

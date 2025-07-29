@@ -1,0 +1,118 @@
+
+//Function Example...............
+
+
+
+
+<div id="mt">
+	
+</div>
+
+<script>
+	function total()
+	{
+		var a =parseInt(prompt("Enter First Number"));
+		var b =parseInt(prompt("Enter Second Number"));
+
+		var c=a+b;
+
+		document.getElementById("mt").innerHTML=c;
+	}
+	total();
+</script>
+
+
+// Global and Local Variable.............
+<br>
+<script>
+	var a = 1000;
+	function b()
+	{
+		var a = 500;
+		if(a==1000)
+		{
+		a= "good";	
+		}
+		document.write(a);
+
+	}
+	function c()
+	{
+		var d = 300;
+		document.write(a);
+
+	}
+	b();
+	c();
+
+</script>
+<br>
+//return ...............
+<script>
+	function a()
+	{
+		var b=10;
+		var c=20;
+		var d = b+c;
+		return d;
+		var b=20; //akber return korle porer kono code r kaj kre na 
+		return d;
+	}
+
+	alert(a());
+</script>
+
+<br>
+// Ternary Operator
+
+<script>
+	 var num = 10;  //ternary operator if else ar kaj ka smallest kre
+
+	 (num>=6)? alert("Big"):alert("small"); //single condition 
+
+
+	 var marks=90; //multiple condition 
+	 var res=(marks<40)?"Unsatisfied":
+	 		(marks<60)?"Average":
+	 		(marks<80)?"Good":"Excellent"
+	 document.write(res);		
+
+
+</script>
+<br>
+// Arrow Function (ES6 Edition).....
+<script>
+	
+	var x = (x,y)=>x*y;
+
+	alert(x(10,5));
+
+	//.....
+
+	num = 20;
+	var nnn=(num>=30)?()=>alert("big"):()=>alert("small");
+
+	nnn();
+//....
+
+let sum = (x,y)=>
+{
+	let ad=x*y;
+	return ad;
+}
+let ress=sum(10,10);
+alert(ress);
+
+</script>
+
+<br>
+//Function as Expression.................
+
+<script>
+	
+ var abc = function (square,xyz) //j function auto kaj kre tai Anonimas function 
+ {
+ 	return square*xyz;
+ }
+ document.write(abc(10,10));
+</script>
